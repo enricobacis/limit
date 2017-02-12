@@ -6,7 +6,7 @@ with open('README.rst') as README:
 
 setup(name='limit',
       version='0.1',
-      description='Decorator that limits the calling rate of functions',
+      description='Decorator that limits the calling rate of a function',
       long_description=long_description,
       url='http://github.com/enricobacis/limit',
       author='Enrico Bacis',
