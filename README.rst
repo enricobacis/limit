@@ -3,10 +3,11 @@ limit
 
 *python decorator that limits the calling rate of a function*
 
---------------------------------------------------------------------------------
-
 This is useful in conjuction with API calls, where you often get banned if you
 perform more calls than the ones specified in the terms of services.
+
+.. image:: https://raw.githubusercontent.com/enricobacis/limit/master/.screenshot/limit.gif
+    :align: center
 
 Description
 -----------
