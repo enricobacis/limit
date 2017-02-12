@@ -32,4 +32,4 @@ The package has been uploaded to `PyPI`_, so you can install it with pip:
     pip install limit
 
 
-.. _PyPI: https://pypi.python.org
+.. _PyPI: https://pypi.python.org/pypi/limit
