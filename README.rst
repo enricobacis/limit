@@ -4,6 +4,7 @@ limit
 *python decorator that limits the calling rate of a function*
 
 .. image:: https://raw.githubusercontent.com/enricobacis/limit/master/.screenshot/limit.gif
+    :target: https://asciinema.org/a/4f621lbwvpgf91neshex89nrm
     :align: center
 
 Description
