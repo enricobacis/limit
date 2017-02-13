@@ -1,7 +1,9 @@
 limit
 =====
 
-*python decorator that limits the calling rate of a function*
+*python decorator that limits the calling rate of a function. This is useful in
+conjuction with web API calls, where you often get banned if you perform more
+calls than the ones specified in the terms of services.*
 
 .. image:: https://raw.githubusercontent.com/enricobacis/limit/master/.screenshot/limit.gif
     :target: https://asciinema.org/a/4f621lbwvpgf91neshex89nrm
@@ -21,9 +23,6 @@ calls to *4 per minute*. If not specified, ``every`` defaults to ``1`` second.
     def function(...):
         """never invoke this function more than 4 times per minute."""
         ...
-
-This is useful in conjuction with API calls, where you often get banned if you
-perform more calls than the ones specified in the terms of services.
 
 Installation
 ------------
