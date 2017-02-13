@@ -1,5 +1,5 @@
-from functools import wraps
-from threading import Semaphore, Timer
+import functools as _functools
+import threading as _threading
 
 
 def limit(limit, every=1):
@@ -12,9 +12,9 @@ def limit(limit, every=1):
 
     def limitdecorator(fn):
         """This is the actual decorator that performs the rate-limiting."""
-        semaphore = Semaphore(limit)
+        semaphore = _threading.Semaphore(limit)
 
-        @wraps(fn)
+        @_functools.wraps(fn)
         def wrapper(*args, **kwargs):
             semaphore.acquire()
 
@@ -22,7 +22,7 @@ def limit(limit, every=1):
                 return fn(*args, **kwargs)
 
             finally:                   # ensure semaphore release
-                timer = Timer(every, semaphore.release)
+                timer = _threading.Timer(every, semaphore.release)
                 timer.setDaemon(True)  # allows the timer to be canceled on exit
                 timer.start()
 
